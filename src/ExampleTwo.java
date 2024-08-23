@@ -25,6 +25,13 @@ public class ExampleTwo {
         preparedStatement.setString(4, "Серый");
         preparedStatement.setInt(5, 3);
         preparedStatement.executeUpdate();
+        // Второе животное
+        preparedStatement.setInt(1, 2);
+        preparedStatement.setString(2, "Кот");
+        preparedStatement.setString(3, "Пушистик");
+        preparedStatement.setString(4, "Белый");
+        preparedStatement.setInt(5, 9);
+        preparedStatement.executeUpdate();
 
     }
 }
