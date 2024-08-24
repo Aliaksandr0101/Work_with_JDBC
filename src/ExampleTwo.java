@@ -32,7 +32,13 @@ public class ExampleTwo {
         preparedStatement.setString(4, "Белый");
         preparedStatement.setInt(5, 9);
         preparedStatement.executeUpdate();
-
+// Третье животное
+        preparedStatement.setInt(1, 3);
+        preparedStatement.setString(2, "Пингвин");
+        preparedStatement.setString(3, "Антон");
+        preparedStatement.setString(4, "Черно-белый");
+        preparedStatement.setInt(5, 9);
+        preparedStatement.executeUpdate();
     }
 }
 
