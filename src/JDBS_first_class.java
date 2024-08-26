@@ -22,6 +22,15 @@ public class JDBS_first_class {
                 " (2,'horse', 'Iva', 'white', 6 )," +
                 "(3, 'duck', 'Happy', 'grey', 9 )" ;
 
+        String insertPetsWhichBrownColor = "INSERT INTO pets OVERRIDING SYSTEM VALUE VALUES " +
+                "(4, 'cat', 'Masha', 'brown', 5 )," +
+                " (5, 'pig', 'Ivi', 'white', 4 )," +
+                "(6, 'cow', 'Suny', 'brown', 5 )" ;
+
+        String deletePet = "DELETE FROM pets WHERE color_of_animal = 'brown' ";
+
+
+
         String output = "SELECT pets_id, kind_of_animal, name_of_animal, color_of_animal, age_of_animal FROM pets where age_of_animal < 8";
 
         try {
@@ -29,7 +38,10 @@ public class JDBS_first_class {
             Statement statement = connection.createStatement();
             statement.execute(createTable);
             statement.execute(insertPets);
+            statement.execute(insertPetsWhichBrownColor);
             System.out.println("Number of pets added = " + statement.getUpdateCount());
+            int rowsAffected = statement.executeUpdate(deletePet);
+            System.out.println("Strings deleted = " + rowsAffected);
 
             ResultSet resultSet = statement.executeQuery(output);
             while (resultSet.next()) {
