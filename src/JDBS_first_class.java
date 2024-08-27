@@ -39,7 +39,7 @@ public class JDBS_first_class {
             statement.execute(createTable);
             statement.execute(insertPets);
             statement.execute(insertPetsWhichBrownColor);
-            System.out.println("Number of pets added = " + statement.getUpdateCount());
+            /*System.out.println("Number of pets added = " + statement.getUpdateCount());*/
             int rowsAffected = statement.executeUpdate(deletePet);
             System.out.println("Strings deleted = " + rowsAffected);
 
