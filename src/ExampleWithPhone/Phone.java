@@ -3,12 +3,12 @@ package ExampleWithPhone;
 public class Phone {
     private int id;
     private String ownerPhone;
-    private String PhoneNumber;
+    private String phoneNumber;
 
     public Phone(int id, String ownerPhone, String phoneNumber) {
         this.id = id;
         this.ownerPhone = ownerPhone;
-        PhoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
     }
 
     public Phone() {
@@ -31,10 +31,19 @@ public class Phone {
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "id=" + id +
+                ", ownerPhone='" + ownerPhone + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }
