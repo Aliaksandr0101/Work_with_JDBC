@@ -9,6 +9,8 @@ public class PhoneRunner {
     private static final String PASSWORD = "sasha";
 
     public static void main(String[] args) throws SQLException {
+        Phone phone = new Phone();
+
        /* Class<Driver> driverClass = Driver.class;
         Connection connection = null;
         String createTable = "CREATE TABLE IF NOT EXISTS phones ( " +
@@ -33,5 +35,8 @@ public class PhoneRunner {
 
         // Вывод всех телефонов
         System.out.println(phoneDAO.getAllPhone());
+        //Обновление телефона
+        phoneDAO.updatePhone(new Phone(2, "Sasha", "+34578956133"));
+
     }
 }
