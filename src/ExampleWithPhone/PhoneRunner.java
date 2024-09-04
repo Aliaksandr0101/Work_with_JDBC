@@ -28,10 +28,10 @@ public class PhoneRunner {
         }*/
 
         PhoneDAO phoneDAO = new PhoneDAO();
-       /* // Добавление нового телефона
+        // Добавление нового телефона
         Phone newPhone = new Phone(1, "Petya", "+375257540828");
         boolean created = phoneDAO.addNewPhone1(newPhone);
-        System.out.println("Телефон создан: " + created);*/
+        System.out.println("Телефон создан: " + created);
 
         // Вывод всех телефонов
         System.out.println(phoneDAO.getAllPhone());
