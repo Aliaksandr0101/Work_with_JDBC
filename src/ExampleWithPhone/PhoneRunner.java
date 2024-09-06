@@ -8,7 +8,7 @@ public class PhoneRunner {
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "sasha";
 
-    /*public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException {
         Phone phone = new Phone();
 
         Class<Driver> driverClass = Driver.class;
@@ -38,5 +38,5 @@ public class PhoneRunner {
         //Обновление телефона
         phoneDAO.updatePhone(new Phone(2, "Sasha", "+34578956133"));
 
-    }*/
+    }
 }
